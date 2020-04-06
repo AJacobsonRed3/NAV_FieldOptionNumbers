@@ -1,0 +1,20 @@
+CREATE TABLE dbo.NAVFieldNames
+(TableNo INT NOT NULL,
+ TableName VARCHAR(30) NOT NULL,
+ FieldNo INT NOT NULL,
+ FieldName VARCHAR(30) NOT NULL,
+ CONSTRAINT PK_NAVFieldNames PRIMARY KEY CLUSTERED (TableNO, FieldNo)
+ )
+ GO
+CREATE TABLE dbo.NAVFieldOptions
+(TableNo INT NOT NULL,
+ TableName VARCHAR(30) NOT NULL,
+ FieldNo INT NOT NULL,
+ FieldName VARCHAR(30) NOT NULL,
+ OptionNo TINYINT NOT NULL,
+ OptionName VARCHAR(30) NOT NULL,
+ CONSTRAINT PK_NAVFieldOptions PRIMARY KEY CLUSTERED (TableNo, FieldNo, OptionNo)
+ )
+ GO
+ 
+ 
